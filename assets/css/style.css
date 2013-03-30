@@ -38,6 +38,16 @@
 	height:240px;
 	background-color:#AAA;
 	margin:auto;
+	position:relative;
+}
+
+#video_shield{
+	width:320px;
+	height:240px;
+	position:absolute;
+	top:0px;
+	left:0px;
+	z-index:9999;
 }
 
 #logo{

@@ -8,23 +8,11 @@
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.layout.js"></script>
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.webcam.js"></script> 
+	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.jplayer.min.js"></script> 
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/functions.js"></script>
-<script>
-	//Camera stuff
-	$(document).ready(function() {
-		$("#user_video").webcam({
-			width: 320,
-			height: 240,
-			mode: "stream",
-			swffile: "<?=base_url()?>/assets/js/jscam_canvas_only.swf",
-			//onTick: function() {},
-			//onSave: function() {},
-			//onCapture: function() {},
-			//debug: function() {},
-			//onLoad: function() {}
-		});
-	});
-</script>	
+	<script>
+		
+	</script>	
 
 
 </head>
@@ -33,7 +21,18 @@
 		<div id="center">
 			<!--Fenêtre de discussion-->
 			<div id="frame_conversation">
-			Bienvenue sur roulette.
+			<p>Bienvenue sur geekroulette. Voici les règlements:</p>
+			<ul>
+				<li>On montre pas sa bizoune.</li>
+				<li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
+			</ul>
+			<p>Comment faire la discussion à un geek:</p>
+			<ul>
+				<li>Jasez de votre sorte de chips préférée.</li>
+				<li>Demandez à votre geek de convertir un nombre en binaire.</li>
+				<li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Chrome ou IE? (lol)</li>
+			</ul>			
+			<p>Appuyez sur <b>Démarrer</b> pour commencer.</p>
 			</div>
 		</div>
 		
@@ -65,7 +64,7 @@
 	<!--Fenêtres de vidéo-->
 		<div class="video_zone">
 			<div class="user_name">Ton nouvel ami geek</div>
-			<div id="top_video" class="video_block"></div>
+			<div id="top_video" class="video_block"><div id="player" class="jp-jplayer"></div><div id="video_shield"></div></div>
 		</div>
 		
 		<div class="video_zone">
