@@ -11,11 +11,6 @@
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.layout.js"></script>
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.webcam.js"></script> 
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.jplayer.min.js"></script> 
-	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/functions.js"></script>
-	<script>
-		
-	</script>	
-
     
 </head>
 <body>
@@ -74,5 +69,8 @@
 	</div>
 
     <script src="/assets/js/bootstrap.min.js"></script>
+    <script type="text/JavaScript" src="<?=base_url()?>/assets/js/functions.js"></script>
+    <script type="text/JavaScript" src="<?=base_url()?>/assets/js/chat.js"></script>
+
 </body>
 </html>
