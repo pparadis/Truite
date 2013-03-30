@@ -99,6 +99,14 @@ $(document).ready(function () {
 				}
 			}
 	});
+-   $("#sendBtn").click(function(event){
+        chatMsg = $("#frame_input").val();
+        if(chatMsg != ""){					
+            postFromUser(chatMsg);
+            $("#frame_input").val('');
+        }
+    });
+
 	
 	// Webcam launcher
 	$("#user_video").webcam({
