@@ -43,6 +43,7 @@ $route['404_override'] = '';
 
 $route['ajax/chat-init'] = "home/ajax_save_webcam_capture";
 $route['ajax/chat-submit'] = "home/ajax_chat_log";
+$route['ajax/chat-get-answer'] = "home/ajax_get_answer";
 
 
 /* End of file routes.php */

@@ -18,7 +18,7 @@ class Home extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{                
+	{
 		$this->load->view('roulette');
 	}
         
@@ -32,6 +32,16 @@ class Home extends CI_Controller {
         public function ajax_chat_log()
         {
             log_chat_message($this->input->post('name'), $this->input->post('message'));
+        }
+        
+        // pour tests
+        public function ajax_get_answer()
+        {
+            $query = $this->db->get('answers');
+            foreach ($query->result('array') as $row)
+            {
+                print_r($row);
+            }    
         }
 }
 
