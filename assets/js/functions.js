@@ -93,17 +93,42 @@ $(document).ready(function () {
 
 	
 	// Webcam launcher
+    var webcamTimerId = null;
+    var webcamDetectionAttempts = 0;
+        
 	$("#user_video").webcam({
 		width: 320,
 		height: 240,
-		mode: "stream",
-		swffile: "assets/js/jscam_canvas_only.swf",
+		mode: "save",
+		swffile: "assets/js/jscam.swf",
 		//onTick: function() {},
-		//onSave: function() {},
-		//onCapture: function() {},
-		//debug: function() {},
-		//onLoad: function() {}
+                //onSave: function() {},
+		onCapture: function() {
+                    webcam.save('ajax/init-chat');
+                },
+                debug: function(type, string) { 
+                    if (string === "Camera started") { 
+                        window.webcam.started = true;
+                        if (window.webcam.onStarted) { window.webcam.onStarted(); }
+                    } 
+                },
+		onLoad: function() {
+                    webcamTimerId = window.setInterval(is_webcam_started, 1000);
+                }
 	});
+        
+	function is_webcam_started(){                       
+            if( webcamDetectionAttempts >= 30 || webcam.started ){
+                window.clearInterval(webcamTimerId);
+            }
+            else{
+                webcamDetectionAttempts++;
+            }
+
+            if(webcam.started){
+                webcam.capture(3); // 3 seconds
+            }
+	}
 	
 	//Video player
 	$("#player").jPlayer({

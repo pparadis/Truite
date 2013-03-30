@@ -18,11 +18,16 @@ class Home extends CI_Controller {
 	 * @see http://codeigniter.com/user_guide/general/urls.html
 	 */
 	public function index()
-	{
-		$this->load->helper('url');
-		
+	{                
 		$this->load->view('roulette');
 	}
+        
+        public function ajax_save_webcam_capture()
+        {
+            $dir_path = create_chat_session_directory();
+            $str = file_get_contents("php://input");
+            file_put_contents($dir_path . '/capture.jpg', pack("H*", $str));
+        }
 }
 
 /* End of file welcome.php */
