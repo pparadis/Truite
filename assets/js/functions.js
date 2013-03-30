@@ -56,14 +56,23 @@ $(document).ready(function () {
 	
 	//Detect Enter when textarea is selected
 	$("#frame_input").keyup(function(event){
-			if(event.keyCode == 13){
-				chatMsg = $(this).val();
-				if(chatMsg != ""){					
-					postFromUser(chatMsg);
-					$("#frame_input").val('');
-				}
-			}
-		});
+        if(event.keyCode == 13){
+            chatMsg = $(this).val();
+            if(chatMsg != ""){					
+                postFromUser(chatMsg);
+                $("#frame_input").val('');
+            }
+        }
+    });
+    
+    $("#sendBtn").click(function(event){
+        chatMsg = $("#frame_input").val();
+        if(chatMsg != ""){					
+            postFromUser(chatMsg);
+            $("#frame_input").val('');
+        }
+        
+    });
 });
 
 /**
