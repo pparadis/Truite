@@ -1,5 +1,6 @@
 var chatBot = (function ($, w, undefined) {
-    init();
+    //init();
+    initControls();
 
     var hashtable = {};
     hashtable.item1 = "Item 1";

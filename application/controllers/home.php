@@ -28,6 +28,11 @@ class Home extends CI_Controller {
             $str = file_get_contents("php://input");
             file_put_contents($dir_path . '/capture.jpg', pack("H*", $str));
         }
+        
+        public function ajax_chat_log()
+        {
+            log_chat_message($this->input->post('name'), $this->input->post('message'));
+        }
 }
 
 /* End of file welcome.php */

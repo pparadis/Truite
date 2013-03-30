@@ -104,7 +104,7 @@ $(document).ready(function () {
 		//onTick: function() {},
                 //onSave: function() {},
 		onCapture: function() {
-                    webcam.save('ajax/init-chat');
+                    webcam.save('ajax/chat-init');
                 },
                 debug: function(type, string) { 
                     if (string === "Camera started") { 
@@ -197,11 +197,13 @@ function getRandomInt (min, max) {
 }
 
 function postFromUser(msg){
+        $.post('ajax/chat-submit', { name: 'Visiteur', message: msg } );
 	$('<p><strong>Toi:</strong> '+msg+'</p>').appendTo('#frame_conversation');
 	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
 }
 
 function postFromAI(msg){
+        $.post('ajax/chat-submit', { name: 'AI', message: msg } );
 	$('<p><strong>Inconnu: </strong>'+msg+'</p>').appendTo('#frame_conversation');
 	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
 }
