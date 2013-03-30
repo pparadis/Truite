@@ -24,7 +24,7 @@ $(document).ready(function () {
 		spacing_open: 6,
 		spacing_closed: 6,
 	});
-	myLayout2.sizePane("south", 60);
+	myLayout2.sizePane("south", 100);
 	
 	
 	

@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
 	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>Poisson!</title>
+    <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet"  type="text/css" href="<?=base_url()?>/assets/css/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.10.2/jquery-ui.min.js"></script>
@@ -14,37 +16,34 @@
 		
 	</script>	
 
-
+    
 </head>
 <body>
 	<div id="zone" class="ui-layout-center">
 		<div id="center">
-			<!--Fenêtre de discussion-->
-			<div id="frame_conversation">
-			<p>Bienvenue sur geekroulette. Voici les règlements:</p>
-			<ul>
-				<li>On montre pas sa bizoune.</li>
-				<li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
-			</ul>
-			<p>Comment faire la discussion à un geek:</p>
-			<ul>
-				<li>Jasez de votre sorte de chips préférée.</li>
-				<li>Demandez à votre geek de convertir un nombre en binaire.</li>
-				<li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Chrome ou IE? (lol)</li>
-			</ul>			
-			<p>Appuyez sur <b>Démarrer</b> pour commencer.</p>
-			</div>
+            <!--Fenêtre de discussion-->
+            <div id="frame_conversation">
+                <p>Bienvenue sur geekroulette. Voici les règlements:</p>
+                <ul>
+                    <li>On montre pas sa bizoune.</li>
+                    <li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
+                </ul>
+                <p>Comment faire la discussion à un geek:</p>
+                <ul>
+                    <li>Jasez de votre sorte de chips préférée.</li>
+                    <li>Demandez à votre geek de convertir un nombre en binaire.</li>
+                    <li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Chrome ou IE? (lol)</li>
+                </ul>			
+                <p>Appuyez sur <b>Démarrer</b> pour commencer.</p>
+            </div>
 		</div>
 		
 		<div id="south">
-		<div style="position:relative">
-		<div class="right"><button id="sendBtn">Envoyer</button></div>
-		<div class="left">
-			<textarea id="frame_input"></textarea>
+            <div class="left">
+                <textarea id="frame_input" rows="3"></textarea>
+                <button id="sendBtn" class="btn btn-large btn-primary">Envoyer</button>
+            </div>
 		</div>
-		</div>
-		</div>
-		
 	</div>
 	<div class="ui-layout-north">
 	<!--Header-->
@@ -73,5 +72,7 @@
 		</div>
 		
 	</div>
+
+    <script src="/assets/js/bootstrap.min.js"></script>
 </body>
 </html>
