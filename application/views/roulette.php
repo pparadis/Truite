@@ -4,6 +4,7 @@
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>GeekRoulette.ca - L'endroit par excellence pour vos blind-dates geeks et hétéros</title>
+    <meta name="description" content="L'endroit par excellence pour vos blind-dates geeks et hétéros" />
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet"  type="text/css" href="<?=base_url()?>/assets/css/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
