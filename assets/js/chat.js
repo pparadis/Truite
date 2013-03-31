@@ -7,7 +7,7 @@ var chatBot = (function ($, w, undefined) {
         $("#frame_input").keyup(function (event) {
             //if (status != 1) return;
             if (event.keyCode === 13) {
-                chatMsg = $(this).val();
+                chatMsg = $(this).val().trim();
                 if (chatMsg !== "") {
                     postFromUser(chatMsg);
                     $("#frame_input").val('');
@@ -17,7 +17,7 @@ var chatBot = (function ($, w, undefined) {
         });
         $("#sendBtn").click(function (event) {
             //if (status != 1) return;
-            chatMsg = $("#frame_input").val();
+            chatMsg = $("#frame_input").val().trim();
             if (chatMsg !== "") {
                 postFromUser(chatMsg);
                 $("#frame_input").val('');
