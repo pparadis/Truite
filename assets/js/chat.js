@@ -36,25 +36,28 @@ var chatBot = (function ($, w, undefined) {
             }
 
             responseInProgress = true;
-            $("#statusMessage").fadeIn();
-            timer = setTimeout(function () {
-                messageTable = new Array();
-                responseInProgress = false;
 
-                $("#statusMessage").fadeOut();
+            responseTimer = setTimeout(function () {
+                $("#statusMessage").fadeIn();
+                timer = setTimeout(function () {
+                    messageTable = new Array();
+                    responseInProgress = false;
 
-                postFromAI(discussionTable[discussionIndex]);
+                    $("#statusMessage").fadeOut();
 
-                if (discussionIndex == discussionTable.length-1) {
                     postFromAI(discussionTable[discussionIndex]);
-                    
-                    discussionIndex = 0;
 
-                    byeTimer = setTimeout(function () {
-                        $("#nextBtn").click();
-                    },getRandomInt(1000,4000));
-                }
-            }, getRandomInt(1000, 4000));
+                    if (discussionIndex == discussionTable.length - 1) {
+                        postFromAI(discussionTable[discussionIndex]);
+
+                        discussionIndex = 0;
+
+                        byeTimer = setTimeout(function () {
+                            $("#nextBtn").click();
+                        }, getRandomInt(1000, 4000));
+                    }
+                }, getRandomInt(1000, 4000));
+            }, getRandomInt(1000, 1250));
         }
     }
 

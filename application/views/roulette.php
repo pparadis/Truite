@@ -60,10 +60,10 @@
 	<div class="ui-layout-east">
         <h3>GeekRoulette est une réalisation de : </h2>
         <p>
-            Jean-François Gagné-Bérubé (FailQC)
+            <a href="#">Jean-François Gagné-Bérubé</a> (<a href="#">FailQC</a>)
         </p>
         <p>
-            Code18
+            <a href="http://code18.blogspot.ca/">Code18</a>
         </p>
         <p>
             <a href="http://frenchcoding.com/about/">Pascal Paradis</a>
