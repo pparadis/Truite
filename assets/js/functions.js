@@ -150,14 +150,14 @@ $(document).ready(function () {
 	var videos = new Array();
 	var videoIterator = 0;
 	videos[0] = {
-				m4v: "http://www.jplayer.org/video/m4v/Big_Buck_Bunny_Trailer.m4v",
-				ogv: "http://www.jplayer.org/video/ogv/Big_Buck_Bunny_Trailer.ogv",
-				webmv: "http://www.jplayer.org/video/webm/Big_Buck_Bunny_Trailer.webm"
+				mp4: "http://creatik.ca/poisson/assets/videos/dizzy.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/dizzy.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/dizzy.webm"
 			};
 	videos[1] = {
-				mp4: "assets/videos/dizzy.mp4",
-				ogv: "assets/videos/dizzy.ogv",
-				webmv: "assets/videos/dizzy.webm"
+				mp4: "http://creatik.ca/poisson/assets/videos/pascal.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/pascal.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/pascal.webm"
 			};
 			
 	
