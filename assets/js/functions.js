@@ -7,19 +7,26 @@ $(document).ready(function () {
 	var myLayout = $('body').layout({ 
 		applyDemoStyles: true, 
 		north: {
-				size:"80"
+				size:"80",
+				closable:false,
+				spacing_open: 6
 			},
 		west: {
-				size:"350"
+				size:"350",
+				closable:false,
+				spacing_open: 6
 			},
 		east: {
-				size:"200"
+				size:"200",
+				closable:false,
+				spacing_open: 6
 			},
 		
 	});
 	
 	var myLayout2 = $('#zone').layout({
 		applyDemoStyles: true,
+		closable:false,
 		center__paneSelector:  "#center",
 		south__paneSelector:   "#south",
 		spacing_open: 6,
