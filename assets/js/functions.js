@@ -89,7 +89,6 @@ $(document).ready(function () {
 			timer = setTimeout(function(){
 				nextBtn.removeAttr("disabled");
 				nextBtn.html("Suivant");
-				//alert("new partner found");
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes maintenant connecté à un nouveau geek. Parler, vous pouvez.</b>");
 				$("#player").jPlayer("play");
