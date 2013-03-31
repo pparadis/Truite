@@ -219,6 +219,21 @@ $(document).ready(function () {
 				ogv: "http://creatik.ca/poisson/assets/videos/pascal.ogv",
 				webmv: "http://creatik.ca/poisson/assets/videos/pascal.webm"
 			};
+	videos[2] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/friday.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/friday.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/friday.webm"
+			};
+	videos[3] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/jf.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/jf.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/jf.webm"
+			};
+	videos[4] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/divan.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/divan.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/divan.webm"
+			};
 			
 	
 	var nbVideos=videos.length;
