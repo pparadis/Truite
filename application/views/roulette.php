@@ -39,8 +39,8 @@
 		
 		<div id="south">
             <div class="left">
-                <textarea id="frame_input" rows="3"></textarea>
-                <button id="sendBtn" class="btn btn-large btn-primary">Envoyer</button>
+                <textarea id="frame_input" disabled="disabled" rows="3"></textarea>
+                <button id="sendBtn" disabled="disabled" class="btn btn-large btn-primary">Envoyer</button>
             </div>
 		</div>
 	</div>

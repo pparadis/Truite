@@ -48,8 +48,6 @@ $(document).ready(function () {
 	});
 	myLayout2.sizePane("south", 100);
 	
-	
-	
 	//Roulette management
 	var timer;
 	var nextBtn = $("#nextBtn");
@@ -70,12 +68,12 @@ $(document).ready(function () {
 			timer = setTimeout(function(){
 				nextBtn.removeAttr("disabled");
 				nextBtn.html("Suivant");
-				//alert("new partner found");
-                                                               
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes connecté à un nouveau geek. Parler, vous pouvez.</b>");
 				$("#player").jPlayer("play");
-                                loadConversation(who);
+				enableConversationControls();
+
+                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}else if(status == 2){
@@ -95,29 +93,38 @@ $(document).ready(function () {
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes maintenant connecté à un nouveau geek. Parler, vous pouvez.</b>");
 				$("#player").jPlayer("play");
-                                loadConversation(who);
+                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}
 	});
-        
-        function loadConversation(n){
-            // @todo (optionnel) : indiquer qui est dans la vidéo chargée pour personnaliser la conversation
-            // @todo si c'est un vidéo autre, désactiver le chat ou overrider la discussion en mettant 1 seule réplique genre: "regarde mon chat tourner en rond!"
+    
+	function enableConversationControls(){
+	    $("#frame_input").removeAttr("disabled")
+	    $("#sendBtn").removeAttr("disabled")
+	}
 
-            var name = (n == '') ? '' : '/' + n;
-            $.get('ajax/chat-start-conversation' + name, 
-                   function(data){
-                       discussionIndex = 0;
-                       discussionTable = data;
-                   },
-                   'json'
-            ).done(
-                function(){
-                    postFromAI(discussionTable[discussionIndex]);
-                }
-            );
-        }
+	function disableConversationControls() {
+	    $("#frame_input").attr("disabled", "disabled");
+	    $("#sendBtn").attr("disabled", "disabled");
+	}
+        
+    function loadConversation(n){
+        // @todo si c'est un vidéo autre, désactiver le chat ou overrider la discussion en mettant 1 seule réplique genre: "regarde mon chat tourner en rond!"
+
+        var name = (n == '') ? '' : '/' + n;
+        $.get('ajax/chat-start-conversation' + name, 
+                function(data){
+                    discussionIndex = 0;
+                    discussionTable = data;
+                },
+                'json'
+        ).done(
+            function(){
+                postFromAI(discussionTable[discussionIndex]);
+            }
+        );
+    }
 	
 	var defaultText = $("#frame_conversation").html();
 	stopBtn.click(function(e){
@@ -131,10 +138,8 @@ $(document).ready(function () {
 		nextBtn.html("Démarrer");
 		statusBar.html("Arrêté.");
 		$("#frame_conversation").html(defaultText);
+		disableConversationControls();
 	});
-	
-
-
 	
 	// Webcam launcher
     var webcamTimerId = null;

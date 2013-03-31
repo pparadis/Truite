@@ -3,9 +3,6 @@ var chatBot = (function ($, w, undefined) {
 
     var messageTable = new Array();
 
-    
-    
-
     function initControls() {
         $("#frame_input").keyup(function (event) {
             //if (status != 1) return;
@@ -29,10 +26,6 @@ var chatBot = (function ($, w, undefined) {
         });
     }
 
-    
-
-    
-
     var responseInProgress = false;
     function handleResponse() {
         messageTable.push(chatMsg);
@@ -45,7 +38,6 @@ var chatBot = (function ($, w, undefined) {
             responseInProgress = true;
             $("#statusMessage").fadeIn();
             timer = setTimeout(function () {
-                //get answer ajax
                 messageTable = new Array();
                 responseInProgress = false;
 
