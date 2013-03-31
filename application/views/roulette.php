@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Poisson!</title>
+	<title>GeekRoulette.ca - l'endroit par excellence pour vos blind-dates geeks et hétéros</title>
     <link href="/assets/css/bootstrap.min.css" rel="stylesheet" media="screen">
 	<link rel="stylesheet"  type="text/css" href="<?=base_url()?>/assets/css/style.css">
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
@@ -18,10 +18,11 @@
 		<div id="center" style="position:relative;">
             <!--Fenêtre de discussion-->
             <div id="frame_conversation">
-                <p>Bienvenue sur geekroulette. Voici les règlements:</p>
+                <p>Bienvenue sur GeekRoulette.ca, l'endroit par excellence pour vos blind-dates geeks et hétéros. Nous savons que les geeks aiment beaucoup leur orinateur et qu'il est parfois difficile de décrocher et se faire des amis dans la vraie vie, Geekroulette est là. </p><p>À propos du service:</p>
                 <ul>
-                    <li>On montre pas sa bizoune.</li>
+                    <li>Il est défendu de montrer sa bizoune.</li>
                     <li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
+					<li>L'équipe se réserve le droit de monitorer vos conversations, pour but d'analyse geek.</li>
                 </ul>
                 <p>Comment faire la discussion à un geek:</p>
                 <ul>
