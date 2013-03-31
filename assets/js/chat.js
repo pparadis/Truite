@@ -1,38 +1,65 @@
 var chatBot = (function ($, w, undefined) {
-    //init();
     initControls();
 
-    var hashtable = {};
-    hashtable.item1 = "Item 1";
-    hashtable.item2 = "Item 2";
-    hashtable.item3 = "Item 3";
-    hashtable.item4 = "Item 4";
-    hashtable.item5 = "Item 5";
-    hashtable.item6 = "Item 6";
+    var messageTable = new Array();
 
+    var keywordTable = {};
+    keywordTable.asv = "asv";
+    keywordTable.chick = "fille";
+    keywordTable.wow = "wow";
+    keywordTable.lol = "lol";
+    keywordTable.poisson = "poisson";
 
+    //function pushMessage(a, b, callback) {
+    //    callback();
+    //}
 
-    function pushMessage() {
+    //asyncLoop(1000, function (loop) {
+    //    pushMessage(1, 2, function (result) {
+    //        console.log(loop.iteration());
+    //        loop.next();
+    //    })},
+    //    function () {
+    //        console.log('cycle ended')
+    //    }
+    //);
 
-        var timer = setTimeout(function () {
-            if (status === 1)
-            {
-                console.log("message");
-            }
-        }, getRandomInt(1000, 7000));
+    //function asyncLoop(iterations, func, callback) {
+    //    var index = 0;
+    //    var done = false;
+    //    var loop = {
+    //        next: function () {
+    //            if (done) {
+    //                return;
+    //            }
+    //            if (index < iterations) {
+    //                index++;
+    //                func(loop);
 
-    }
-
-
-
+    //            } else {
+    //                done = true;
+    //                callback();
+    //            }
+    //        },
+    //        iteration: function () {
+    //            return index - 1;
+    //        },
+    //        break: function () {
+    //            done = true;
+    //            callback();
+    //        }
+    //    };
+    //    loop.next();
+    //    return loop;
+    //}
     function initControls() {
-        //Detect Enter when textarea is selected
         $("#frame_input").keyup(function (event) {
             if (event.keyCode === 13) {
                 chatMsg = $(this).val();
                 if (chatMsg !== "") {
                     postFromUser(chatMsg);
                     $("#frame_input").val('');
+                    handleResponse();
                 }
             }
         });
@@ -41,8 +68,33 @@ var chatBot = (function ($, w, undefined) {
             if (chatMsg !== "") {
                 postFromUser(chatMsg);
                 $("#frame_input").val('');
+                handleResponse();
             }
         });
+
+        var responseInProgress = false;
+        function handleResponse() {
+            messageTable.push(chatMsg);
+            //console.log("stack " + messageTable.length);
+            if (messageTable.length >= 2) {
+                if (responseInProgress) {
+                    return;
+                }
+
+                responseInProgress = true;
+                $("#statusMessage").fadeIn();
+                timer = setTimeout(function () {
+                    var stackIndex = getRandomInt(0, messageTable.length - 1);
+                    //get answer ajax
+                    messageTable = new Array();
+                    responseInProgress = false;
+                    $("#statusMessage").fadeOut();
+                    
+                    
+                    postFromAI(keywordTable.asv);
+                }, getRandomInt(1000, 4000));
+            }
+        }
     }
 
 }(jQuery, window));

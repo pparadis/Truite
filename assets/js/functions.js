@@ -1,4 +1,5 @@
 //Javasript file
+var status = 0; //0=stopped 1=loading new partner 2=connected to someone
 
 $(document).ready(function () {
 
@@ -30,7 +31,6 @@ $(document).ready(function () {
 	
 	//Roulette management
 	var timer;
-	var status = 0; //0=stopped 1=loading new partner 2=connected to someone
 	var nextBtn = $("#nextBtn");
 	var stopBtn = $("#stopBtn");
 	var statusBar = $("#status");
@@ -197,13 +197,13 @@ function getRandomInt (min, max) {
 }
 
 function postFromUser(msg){
-        $.post('ajax/chat-submit', { name: 'Visiteur', message: msg } );
+    $.post('ajax/chat-submit', { name: 'Visiteur', message: msg } );
 	$('<p><strong>Toi:</strong> '+msg+'</p>').appendTo('#frame_conversation');
 	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
 }
 
 function postFromAI(msg){
-        $.post('ajax/chat-submit', { name: 'AI', message: msg } );
+    $.post('ajax/chat-submit', { name: 'AI', message: msg } );
 	$('<p><strong>Inconnu: </strong>'+msg+'</p>').appendTo('#frame_conversation');
 	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
 }
