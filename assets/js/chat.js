@@ -52,7 +52,6 @@ var chatBot = (function ($, w, undefined) {
                 $("#statusMessage").fadeOut();
 
                 postFromAI(discussionTable[discussionIndex]);
-                discussionIndex++;
 
                 if (discussionIndex == discussionTable.length-1) {
                     postFromAI(discussionTable[discussionIndex]);

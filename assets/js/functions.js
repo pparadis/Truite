@@ -275,6 +275,7 @@ function postFromAI(msg){
     
     $('<p><strong>' + whoName + ': </strong>'+msg+'</p>').appendTo('#frame_conversation');
     $("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
-        
+
     discussionIndex++;
+    
 }
