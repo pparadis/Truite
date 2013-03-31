@@ -15,7 +15,7 @@
 </head>
 <body>
 	<div id="zone" class="ui-layout-center">
-		<div id="center">
+		<div id="center" style="position:relative;">
             <!--Fenêtre de discussion-->
             <div id="frame_conversation">
                 <p>Bienvenue sur geekroulette. Voici les règlements:</p>
@@ -30,6 +30,9 @@
                     <li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Chrome ou IE? (lol)</li>
                 </ul>			
                 <p>Appuyez sur <b>Démarrer</b> pour commencer.</p>
+            </div>
+            <div id="statusMessage">
+                Réponse en cours d'écriture
             </div>
 		</div>
 		

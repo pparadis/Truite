@@ -101,6 +101,13 @@ p{
     margin-left:20px;
 }
 
+#statusMessage{
+    position: absolute; 
+    bottom: 0; 
+    background:#F0F0F0;
+    width:500px;
+    display:none;
+}
 
 .left{
     padding: 5px 5px 10px 5px;
