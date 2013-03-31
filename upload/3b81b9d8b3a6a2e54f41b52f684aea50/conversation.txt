@@ -1,0 +1,28 @@
+2013-03-31 14:13:54 <AI> Array
+2013-03-31 14:13:57 <Visiteur> Coco
+2013-03-31 14:13:59 <AI> Array
+2013-03-31 14:14:07 <Visiteur> 26-male-montréal
+2013-03-31 14:14:09 <AI> Array
+2013-03-31 14:14:12 <Visiteur> ben là!
+2013-03-31 14:14:15 <AI> Array
+2013-03-31 14:15:20 <AI> Array
+2013-03-31 14:15:25 <Visiteur> Salut!
+2013-03-31 14:15:27 <AI> Array
+2013-03-31 14:15:33 <Visiteur> Josianne
+2013-03-31 14:15:34 <AI> Array
+2013-03-31 14:15:40 <Visiteur> 26-femelle-montréal
+2013-03-31 14:15:43 <AI> Array
+2013-03-31 14:15:54 <AI> Array
+2013-03-31 14:16:03 <Visiteur> Salut!
+2013-03-31 14:16:06 <AI> Array
+2013-03-31 14:16:14 <Visiteur> Moi c'est le pape!
+2013-03-31 14:16:15 <AI> Array
+2013-03-31 14:16:21 <Visiteur> 100-male-rome
+2013-03-31 14:16:23 <AI> Array
+2013-03-31 14:16:26 <Visiteur> Ben là!
+2013-03-31 14:16:29 <AI> Array
+2013-03-31 14:16:33 <Visiteur> Ah pas pire pas pire
+2013-03-31 14:16:36 <AI> Array
+2013-03-31 14:16:41 <Visiteur> Ah c'est cool!
+2013-03-31 14:16:42 <AI> Array
+2013-03-31 14:16:42 <AI> Array

@@ -1,5 +1,16 @@
 //Javasript file
 var status = 0; //0=stopped 1=loading new partner 2=connected to someone
+var discussionTable = [
+        ["Salutation"],
+        ["Mon nom est Pascal. Et toi?"],
+        ["ASV? lol"],
+        ["Ouain, c'est pas jeune jeune!"],
+        ["Ouain, il fait beau dehors"],
+        ["Toi... la vie?"],
+        ["T'aime ça les ordinateurs?"],
+        ["Je dois quitter! Bye!"]
+];
+var discussionIndex = 0;
 
 $(document).ready(function () {
 
@@ -57,6 +68,9 @@ $(document).ready(function () {
 				//alert("new partner found");
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes connecté à un nouveau geek. Parler, vous pouvez.</b>");
+				postFromAI(discussionTable[discussionIndex]);
+				discussionIndex++;
+
 				$("#player").jPlayer("play");
 				status = 2;
 			},getRandomInt(3000,7000));
@@ -185,6 +199,7 @@ $(document).ready(function () {
 		$("#stopBtn").trigger("click");
 		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
 		statusBar.html("Vous avez été flushé.");
+		discussionIndex = 0;
 	}
 });
 

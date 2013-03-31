@@ -3,15 +3,12 @@ var chatBot = (function ($, w, undefined) {
 
     var messageTable = new Array();
 
-    var keywordTable = {};
-    keywordTable.asv = "asv";
-    keywordTable.chick = "fille";
-    keywordTable.wow = "wow";
-    keywordTable.lol = "lol";
-    keywordTable.poisson = "poisson";
+    
+    
 
     function initControls() {
         $("#frame_input").keyup(function (event) {
+            //if (status != 1) return;
             if (event.keyCode === 13) {
                 chatMsg = $(this).val();
                 if (chatMsg !== "") {
@@ -22,6 +19,7 @@ var chatBot = (function ($, w, undefined) {
             }
         });
         $("#sendBtn").click(function (event) {
+            //if (status != 1) return;
             chatMsg = $("#frame_input").val();
             if (chatMsg !== "") {
                 postFromUser(chatMsg);
@@ -29,29 +27,43 @@ var chatBot = (function ($, w, undefined) {
                 handleResponse();
             }
         });
+    }
 
-        var responseInProgress = false;
-        function handleResponse() {
-            messageTable.push(chatMsg);
-            //console.log("stack " + messageTable.length);
-            if (messageTable.length >= 2) {
-                if (responseInProgress) {
-                    return;
-                }
+    
 
-                responseInProgress = true;
-                $("#statusMessage").fadeIn();
-                timer = setTimeout(function () {
-                    var stackIndex = getRandomInt(0, messageTable.length - 1);
-                    console.log(stackIndex);
-                    console.log("asking for " + messageTable[stackIndex]);
-                    //get answer ajax
-                    messageTable = new Array();
-                    responseInProgress = false;
-                    $("#statusMessage").fadeOut();
-                    postFromAI(keywordTable.asv);
-                }, getRandomInt(1000, 4000));
+    
+
+    var responseInProgress = false;
+    function handleResponse() {
+        messageTable.push(chatMsg);
+        //console.log("stack " + messageTable.length);
+        if (messageTable.length >= 1) {
+            if (responseInProgress) {
+                return;
             }
+
+            responseInProgress = true;
+            $("#statusMessage").fadeIn();
+            timer = setTimeout(function () {
+                //get answer ajax
+                messageTable = new Array();
+                responseInProgress = false;
+
+                $("#statusMessage").fadeOut();
+
+                postFromAI(discussionTable[discussionIndex]);
+                discussionIndex++;
+
+                if (discussionIndex == discussionTable.length-1) {
+                    postFromAI(discussionTable[discussionIndex]);
+                    
+                    discussionIndex = 0;
+
+                    byeTimer = setTimeout(function () {
+                        $("#nextBtn").click();
+                    },getRandomInt(1000,4000));
+                }
+            }, getRandomInt(1000, 4000));
         }
     }
 
