@@ -85,12 +85,12 @@ var chatBot = (function ($, w, undefined) {
                 $("#statusMessage").fadeIn();
                 timer = setTimeout(function () {
                     var stackIndex = getRandomInt(0, messageTable.length - 1);
+                    console.log(stackIndex);
+                    console.log("asking for " + messageTable[stackIndex]);
                     //get answer ajax
                     messageTable = new Array();
                     responseInProgress = false;
                     $("#statusMessage").fadeOut();
-                    
-                    
                     postFromAI(keywordTable.asv);
                 }, getRandomInt(1000, 4000));
             }
