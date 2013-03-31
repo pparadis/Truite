@@ -34,14 +34,33 @@ class Home extends CI_Controller {
             log_chat_message($this->input->post('name'), $this->input->post('message'));
         }
         
-        // pour tests
-        public function ajax_get_answer()
+        public function ajax_get_conversation($who = '')
         {
-            $query = $this->db->get('answers');
-            foreach ($query->result('array') as $row)
-            {
-                print_r($row);
-            }    
+            if(!in_array($who, array('jeanfrancois', 'pascal', 'code18'))){
+                $who = '';
+            }
+            
+            $answers = array();
+            $queries = array(
+                "SELECT * FROM answers WHERE category = 'salutation' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'asv' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'post-asv' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'presentation' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'intro' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'smalltalk' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY RANDOM() LIMIT 5 + ABS(RANDOM())%5",
+                "SELECT * FROM answers WHERE category = 'plug' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+                "SELECT * FROM answers WHERE category = 'conclusion' AND (owner_name IS NULL OR owner_name = '$who') ORDER BY random() LIMIT 1",
+            );
+            
+            foreach($queries as $sql){
+                $query = $this->db->query($sql);
+                foreach($query->result('array') as $row){
+                    $answers[] = $row['answer_text'];
+                }
+            }
+            
+            print_r(json_encode($answers));
+            return json_encode($answers);
         }
 }
 

@@ -1,5 +1,8 @@
-//Javasript file
+//Javascript file
 var status = 0; //0=stopped 1=loading new partner 2=connected to someone
+var who = ''; // pascal, jeanfrancois, code18
+var whoName = ''; // nom littéral
+// conversation par défaut (fallback)
 var discussionTable = [
         ["Salutation"],
         ["Mon nom est Pascal. Et toi?"],
@@ -54,6 +57,7 @@ $(document).ready(function () {
 	var statusBar = $("#status");
 
 	nextBtn.click(function(e){
+            
 		if(status == 0){
 			$(this).attr("disabled", "disabled");
 			$(this).html("Chargement...");
@@ -61,17 +65,17 @@ $(document).ready(function () {
 			$("#player").jPlayer("setMedia", getVideo());
 			status = 1;
 			clearChat();
+                                                
 			//Simulating loading time randomly between 3 and 7 seconds
 			timer = setTimeout(function(){
 				nextBtn.removeAttr("disabled");
 				nextBtn.html("Suivant");
 				//alert("new partner found");
+                                                               
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes connecté à un nouveau geek. Parler, vous pouvez.</b>");
-				postFromAI(discussionTable[discussionIndex]);
-				discussionIndex++;
-
 				$("#player").jPlayer("play");
+                                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}else if(status == 2){
@@ -91,10 +95,29 @@ $(document).ready(function () {
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes maintenant connecté à un nouveau geek. Parler, vous pouvez.</b>");
 				$("#player").jPlayer("play");
+                                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}
 	});
+        
+        function loadConversation(n){
+            // @todo (optionnel) : indiquer qui est dans la vidéo chargée pour personnaliser la conversation
+            // @todo si c'est un vidéo autre, désactiver le chat ou overrider la discussion en mettant 1 seule réplique genre: "regarde mon chat tourner en rond!"
+
+            var name = (n == '') ? '' : '/' + n;
+            $.get('ajax/chat-start-conversation' + name, 
+                   function(data){
+                       discussionIndex = 0;
+                       discussionTable = data;
+                   },
+                   'json'
+            ).done(
+                function(){
+                    postFromAI(discussionTable[discussionIndex]);
+                }
+            );
+        }
 	
 	var defaultText = $("#frame_conversation").html();
 	stopBtn.click(function(e){
@@ -134,11 +157,11 @@ $(document).ready(function () {
                     } 
                 },
 		onLoad: function() {
-                    webcamTimerId = window.setInterval(is_webcam_started, 1000);
+                    webcamTimerId = window.setInterval(isWebcamStarted, 1000);
                 }
 	});
         
-	function is_webcam_started(){                       
+	function isWebcamStarted(){                       
             if( webcamDetectionAttempts >= 30 || webcam.started ){
                 window.clearInterval(webcamTimerId);
             }
@@ -170,6 +193,18 @@ $(document).ready(function () {
 	//Video list
 	var videos = new Array();
 	var videoIterator = 0;
+
+        var videoName = [];
+        videoName['pascal'] = 'Pascal';
+        videoName['jeanfrancois'] = 'Jean-François';
+        videoName['code18'] = 'Code 18';
+
+        // @todo à compléter
+        var videoAI = [];
+        videoAI[1] = 'pascal'; // videos[1]
+        //videoAI[x] = 'jeanfrancois';
+        //videoAI[x] = 'code18';
+        
 	videos[0] = {
 				mp4: "http://creatik.ca/poisson/assets/videos/dizzy.mp4",
 				ogv: "http://creatik.ca/poisson/assets/videos/dizzy.ogv",
@@ -188,18 +223,27 @@ $(document).ready(function () {
 		var temp=videoIterator;
 		if(nbVideos-1 == videoIterator){
 			videoIterator = 0;
-			return videos[temp];
 		}else{
 			videoIterator++;
-			return videos[temp];
+			
 		}
+                
+                if(videoAI[temp] != undefined){
+                    who = videoAI[temp];
+                    whoName = videoName[who];
+                }
+                else{
+                    who = '';
+                    whoName = 'Inconnu';
+                }
+                
+                return videos[temp];
 	}
 	
 	function nexted(){
 		$("#stopBtn").trigger("click");
 		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
 		statusBar.html("Vous avez été flushé.");
-		discussionIndex = 0;
 	}
 });
 
@@ -226,6 +270,11 @@ function postFromUser(msg){
 
 function postFromAI(msg){
     $.post('ajax/chat-submit', { name: 'AI', message: msg } );
-	$('<p><strong>Inconnu: </strong>'+msg+'</p>').appendTo('#frame_conversation');
-	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
+    
+    msg = msg.toString().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, "<a href='$1' target='_blank'>$1</a>"); 
+    
+    $('<p><strong>' + whoName + ': </strong>'+msg+'</p>').appendTo('#frame_conversation');
+    $("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
+        
+    discussionIndex++;
 }
