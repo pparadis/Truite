@@ -74,7 +74,7 @@ $(document).ready(function () {
 				$("#player").jPlayer("play");
 				enableConversationControls();
 
-                loadConversation(who);
+                                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}else if(status == 2){
@@ -93,7 +93,7 @@ $(document).ready(function () {
 				statusBar.html("En discussion avec un geek inconnu.");
 				$("#frame_conversation").html("<b>Vous êtes maintenant connecté à un nouveau geek. Parler, vous pouvez.</b>");
 				$("#player").jPlayer("play");
-                loadConversation(who);
+                                loadConversation(who);
 				status = 2;
 			},getRandomInt(3000,7000));
 		}
@@ -110,8 +110,6 @@ $(document).ready(function () {
 	}
         
     function loadConversation(n){
-        // @todo si c'est un vidéo autre, désactiver le chat ou overrider la discussion en mettant 1 seule réplique genre: "regarde mon chat tourner en rond!"
-
         var name = (n == '') ? '' : '/' + n;
         $.get('ajax/chat-start-conversation' + name, 
                 function(data){
@@ -121,7 +119,9 @@ $(document).ready(function () {
                 'json'
         ).done(
             function(){
-                postFromAI(discussionTable[discussionIndex]);
+                if(who != ''){
+                    postFromAI(discussionTable[discussionIndex]);
+                }
             }
         );
     }
@@ -203,13 +203,14 @@ $(document).ready(function () {
         videoName['pascal'] = 'Pascal';
         videoName['jeanfrancois'] = 'Jean-François';
         videoName['code18'] = 'Code 18';
+        videoName['mathieu'] = 'Mathieu';
 
         // @todo à compléter
         var videoAI = [];
         videoAI[1] = 'pascal'; // videos[1]
         videoAI[4] = 'jeanfrancois';
         videoAI[6] = 'code18';
-		videoAI[7] = 'mathieu';
+        videoAI[7] = 'mathieu';
 		
 		/*setTimeout(function(){
 			$.fool('rick'); //  Run the Rick Astley prank
@@ -325,8 +326,7 @@ function postFromAI(msg){
     msg = msg.toString().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, "<a href='$1' target='_blank'>$1</a>"); 
     
     $('<p><strong>' + whoName + ': </strong>'+msg+'</p>').appendTo('#frame_conversation');
-	$('#center').scrollTop($('#frame_conversation').height());
+    $('#center').scrollTop($('#frame_conversation').height());
 
     discussionIndex++;
-    
 }

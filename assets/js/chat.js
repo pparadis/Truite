@@ -38,18 +38,23 @@ var chatBot = (function ($, w, undefined) {
             responseInProgress = true;
 
             responseTimer = setTimeout(function () {
-                $("#statusMessage").fadeIn();
+                if(who != ''){
+                    $("#statusMessage").fadeIn();
+                }
                 timer = setTimeout(function () {
                     messageTable = new Array();
                     responseInProgress = false;
 
                     $("#statusMessage").fadeOut();
-                    if (status == 2)
-                    {
-                        postFromAI(discussionTable[discussionIndex]);
+                    if (status == 2){
+                        if(who != ''){
+                            postFromAI(discussionTable[discussionIndex]);
+                        }
 
                         if (discussionIndex == discussionTable.length - 1) {
-                            postFromAI(discussionTable[discussionIndex]);
+                            if(who != ''){
+                                postFromAI(discussionTable[discussionIndex]);
+                            }
 
                             discussionIndex = 0;
 
