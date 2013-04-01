@@ -176,7 +176,7 @@ html body.ui-layout-container div.ui-layout-north div#buttons button
 	background-color: #eee;
 	padding: 5px;
 	border-radius: 5px;
-	width: 200px;
+	width: 300px;
 	color: #676767;
 	margin-top: 3px;
 }
@@ -190,7 +190,15 @@ html body.ui-layout-container div.ui-layout-north div#buttons button
 {
 	width: auto;
 	background: none;
-	padding: 10px 0 0 0;
+	padding: 10px 5px 0 0;
+}
+
+#share
+{
+	width: 210px;
+    float:right;
+	background: none;
+	padding: 13px 0 0 5px;
 }
 
 .user_name
