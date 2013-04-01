@@ -5,7 +5,7 @@ var whoName = ''; // nom littéral
 // conversation par défaut (fallback)
 var discussionTable = [
         ["Salutation"],
-        ["Mon nom est Pascal. Et toi?"],
+		["Ça va ?"],
         ["ASV? lol"],
         ["Ouain, c'est pas jeune jeune!"],
         ["Ouain, il fait beau dehors"],
@@ -123,8 +123,8 @@ $(document).ready(function () {
 	}
         
     function loadConversation(n){
-        var name = (n == '') ? '' : '/' + n;
-        $.get('ajax/chat-start-conversation' + name, 
+        var AIname = (n == '') ? '' : '/' + n;
+        $.get('ajax/chat-start-conversation' + AIname, 
                 function(data){
                     discussionIndex = 0;
                     discussionTable = data;
@@ -334,7 +334,7 @@ function postFromUser(msg){
 }
 
 function postFromAI(msg){
-    $.post('ajax/chat-submit', { name: 'AI', message: msg } );
+    $.post('ajax/chat-submit', { name: whoName, message: msg } );
     
     msg = msg.toString().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, "<a href='$1' target='_blank'>$1</a>"); 
     

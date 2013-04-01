@@ -36,9 +36,11 @@ class Home extends CI_Controller {
         
         public function ajax_get_conversation($who = '')
         {
-            if(!in_array($who, array('jeanfrancois', 'pascal', 'code18'))){
+            if(!in_array($who, array('jeanfrancois', 'pascal', 'code18', 'mathieu'))){
                 $who = '';
             }
+			
+			log_chat_start($who);
             
             $answers = array();
             $queries = array(
@@ -59,8 +61,7 @@ class Home extends CI_Controller {
                 }
             }
             
-            print_r(json_encode($answers));
-            return json_encode($answers);
+            echo json_encode($answers);
         }
 }
 

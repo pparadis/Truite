@@ -39,3 +39,18 @@ if ( ! function_exists('log_chat_message'))
             fclose($handler);
 	}
 }
+
+if ( ! function_exists('log_chat_start'))
+{
+	function log_chat_start($name)
+	{
+            $CI =& get_instance();
+            
+            $directory_path = create_chat_session_directory();
+            $conversation_path = $directory_path . '/conversation.txt';
+
+            $handler = fopen($conversation_path, 'a') or die("Error opening or creating conversation file");           
+            fwrite($handler, "\n\n# Nouvelle conversation avec : " . ($name != '' ? $name : 'Inconnu') . "\n");
+            fclose($handler);
+	}
+}
