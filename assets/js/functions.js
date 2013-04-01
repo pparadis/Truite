@@ -16,7 +16,7 @@ var discussionTable = [
 var discussionIndex = 0;
 
 $(document).ready(function () {
-
+    addthis.init();
 	// LAYOUT //
 	var myLayout = $('body').layout({ 
 		applyDemoStyles: true, 
