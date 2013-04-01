@@ -28,10 +28,8 @@ var chatBot = (function ($, w, undefined) {
 
     var responseInProgress = false;
     function handleResponse() {
-        console.log(status);
         if (status != 2) return;
         messageTable.push(chatMsg);
-        //console.log("stack " + messageTable.length);
         if (messageTable.length >= 1) {
             if (responseInProgress) {
                 return;
