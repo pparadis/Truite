@@ -75,7 +75,7 @@
 	</div>
 	
 	<div class="ui-layout-east">
-		<h4>Bon poisson d'avril!</h4>
+		<h4>Bon poisson d'avril! ;)</h4>
 		<p>Propage la bonne nouvelle.</p><p style="margin-top:10px;"> <div >
         <!-- AddThis Button BEGIN -->
             <div class="addthis_toolbox addthis_default_style addthis_32x32_style">

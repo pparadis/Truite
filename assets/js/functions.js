@@ -60,10 +60,12 @@ $(document).ready(function () {
         if(countNext == 9){
 			status = 5;
 			setTimeout(function(){$("#stopBtn").trigger("click");},500);
+			setTimeout(function(){$("#nextBtn").attr("disabled", "disabled");
+			$("#stopBtn").attr("disabled", "disabled");},1000);
 			$.fool('rick'); //  Run the Rick Astley prank
 			myLayout.open("east");
 			statusBar.html("Poisson d'avril!");
-			countNext++
+			countNext++;
 		}	else{
 			countNext++;
 		}
