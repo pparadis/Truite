@@ -198,7 +198,14 @@ $(document).ready(function () {
 			
 		},
 		ended: function () {
-			nexted();
+		console.log(countNext);
+			if(countNext == 3 || countNext == 6 || countNext == 6){
+				console.log("restart");
+				$("#player").jPlayer("play");
+			}else{
+				console.log("next");
+				nexted();
+			}
 		},
 		swfPath: "../js",
 		supplied: "webmv, ogv, m4v",
