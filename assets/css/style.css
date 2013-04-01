@@ -148,6 +148,17 @@ html body.ui-layout-container div.ui-layout-north div#buttons button#stopBtn
     border-radius: 6px;
 }
 
+#retry
+{
+	background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+	background-color: #1ad317;
+	background-image: linear-gradient(to bottom, #1ad317, #0f7b0d);
+}
+
 html body.ui-layout-container div.ui-layout-north div#buttons button#nextBtn
 {
 	background-color: #1ad317;

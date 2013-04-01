@@ -31,9 +31,10 @@ $(document).ready(function () {
 				spacing_open: 6
 			},
 		east: {
-				size:"200",
+				size:"300",
 				closable:false,
-				spacing_open: 6
+				spacing_open: 6,
+				initClosed: true
 			},
 		
 	});
@@ -206,35 +207,63 @@ $(document).ready(function () {
         // @todo à compléter
         var videoAI = [];
         videoAI[1] = 'pascal'; // videos[1]
-        //videoAI[x] = 'jeanfrancois';
-        //videoAI[x] = 'code18';
-        
+        videoAI[4] = 'jeanfrancois';
+        videoAI[6] = 'code18';
+		videoAI[7] = 'mathieu';
+		
+		/*setTimeout(function(){
+			$.fool('rick'); //  Run the Rick Astley prank
+			myLayout.open("east");
+		},3000);*/
+		
+		
 	videos[0] = {
-				mp4: "http://creatik.ca/poisson/assets/videos/dizzy.mp4",
-				ogv: "http://creatik.ca/poisson/assets/videos/dizzy.ogv",
-				webmv: "http://creatik.ca/poisson/assets/videos/dizzy.webm"
-			};
+				mp4: "http://creatik.ca/poisson/assets/videos/friday.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/friday.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/friday.webm"
+			};	
+		
 	videos[1] = {
 				mp4: "http://creatik.ca/poisson/assets/videos/pascal.mp4",
 				ogv: "http://creatik.ca/poisson/assets/videos/pascal.ogv",
 				webmv: "http://creatik.ca/poisson/assets/videos/pascal.webm"
 			};
+
 	videos[2] = {
-				mp4: "http://creatik.ca/poisson/assets/videos/friday.mp4",
-				ogv: "http://creatik.ca/poisson/assets/videos/friday.ogv",
-				webmv: "http://creatik.ca/poisson/assets/videos/friday.webm"
-			};
-	videos[3] = {
-				mp4: "http://creatik.ca/poisson/assets/videos/jf.mp4",
-				ogv: "http://creatik.ca/poisson/assets/videos/jf.ogv",
-				webmv: "http://creatik.ca/poisson/assets/videos/jf.webm"
-			};
-	videos[4] = {
 				mp4: "http://creatik.ca/poisson/assets/videos/divan.mp4",
 				ogv: "http://creatik.ca/poisson/assets/videos/divan.ogv",
 				webmv: "http://creatik.ca/poisson/assets/videos/divan.webm"
+			};			
+		
+	videos[3] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/piano.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/piano.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/piano.webm"
+			};	
+	
+	videos[4] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/jf.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/jf.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/jf.webm"
+			};	
+		      
+	videos[5] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/dizzy.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/dizzy.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/dizzy.webm"
 			};
 			
+	videos[6] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/code18.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/code18.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/code18.webm"
+			};
+
+	videos[7] = {
+				mp4: "http://creatik.ca/poisson/assets/videos/mathieu.mp4",
+				ogv: "http://creatik.ca/poisson/assets/videos/mathieu.ogv",
+				webmv: "http://creatik.ca/poisson/assets/videos/mathieu.webm"
+			};						
 	
 	var nbVideos=videos.length;
 	

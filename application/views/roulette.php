@@ -75,9 +75,25 @@
 	</div>
 	
 	<div class="ui-layout-east">
+		<h4>Bon poisson d'avril!</h4>
+		<p>Propage la bonne nouvelle.</p><p style="margin-top:10px;"> <div >
+        <!-- AddThis Button BEGIN -->
+            <div class="addthis_toolbox addthis_default_style addthis_32x32_style">
+            <a class="addthis_button_preferred_1"></a>
+            <a class="addthis_button_preferred_2"></a>
+            <a class="addthis_button_preferred_4"></a>
+            <a class="addthis_button_compact"></a>
+            <a class="addthis_counter addthis_bubble_style"></a>
+            </div>
+            <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f85a0a945c65b0c"></script>
+            <!-- AddThis Button END -->
+        </div></p>
+		<h4>Tu veux réessayer?</h4>
+		<p><button id="retry">Recharger la page</button></p>
         <h4>GeekRoulette est une réalisation de : </h4>
         <ul style="list-style-type: none; padding:0; margin:0;">
-            <li style="padding-bottom:5px;"><a href="http://failqc.com/" target="_blank">Jean-François Gagné Bérubé</a> (<a href="http://failqc.com/" target="_blank">FailQC</a>)</li>
+            <li style="padding-bottom:5px;"><a href="http://twitter.com/jeanfrancoisgb" target="_blank">Jean-François Gagné Bérubé</a> (<a href="http://failqc.com/" target="_blank">FailQC</a>)</li>
             <li style="padding-bottom:5px;"><a href="http://code18.blogspot.ca/">Code18</a></li>
             <li style="padding-bottom:5px;"><a href="http://frenchcoding.com/about/">Pascal Paradis</a></li>
             <li style="padding-bottom:5px;"><a href="http://cartooniste.com/" target="_blank">Saymone P.</a></li>
@@ -101,6 +117,7 @@
     <script src="/assets/js/bootstrap.min.js"></script>
     <script type="text/JavaScript" src="<?=base_url()?>/assets/js/functions.js"></script>
     <script type="text/JavaScript" src="<?=base_url()?>/assets/js/chat.js"></script>
+	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/fool.min.js"></script>
 	<script type="text/javascript">
 
 	  var _gaq = _gaq || [];
