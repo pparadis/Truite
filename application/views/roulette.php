@@ -12,6 +12,7 @@
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.layout.js"></script>
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.webcam.js"></script> 
 	<script type="text/JavaScript" src="<?=base_url()?>/assets/js/jquery.jplayer.min.js"></script> 
+    <meta property="og:image" content="/share-facebook.png"/>  
     
 </head>
 <body>
