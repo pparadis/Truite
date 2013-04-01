@@ -262,6 +262,7 @@ $(document).ready(function () {
 	function nexted(){
 		$("#stopBtn").trigger("click");
 		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
+		$('#center').scrollTop($('#frame_conversation').height());
 		statusBar.html("Vous avez été flushé.");
 		status = 0;
 		$("#statusMessage").hide();
@@ -286,7 +287,7 @@ function getRandomInt (min, max) {
 function postFromUser(msg){
     $.post('ajax/chat-submit', { name: 'Visiteur', message: msg } );
 	$('<p><strong>Toi:</strong> '+msg+'</p>').appendTo('#frame_conversation');
-	$("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
+	$('#center').scrollTop($('#frame_conversation').height());
 }
 
 function postFromAI(msg){
@@ -295,7 +296,7 @@ function postFromAI(msg){
     msg = msg.toString().replace(/(\b(https?|ftp|file):\/\/[-A-Z0-9+&@#\/%?=~_|!:,.;]*[-A-Z0-9+&@#\/%=~_|])/i, "<a href='$1' target='_blank'>$1</a>"); 
     
     $('<p><strong>' + whoName + ': </strong>'+msg+'</p>').appendTo('#frame_conversation');
-    $("#frame_conversation").prop({ scrollTop: $("#frame_conversation").prop("scrollHeight") });
+	$('#center').scrollTop($('#frame_conversation').height());
 
     discussionIndex++;
     

@@ -36,15 +36,16 @@
                 </ul>			
                 <p style="font-size: 16px; margin: 20px 0">Appuyez sur <b style="color: #0f7b0d">Démarrer</b> pour commencer.</p>
             </div>
-            <div id="statusMessage">
-                Réponse en cours d'écriture
-            </div>
+			
 		</div>
 		
 		<div id="south">
             <div class="left">
                 <textarea id="frame_input" disabled="disabled" rows="3"></textarea>
                 <button id="sendBtn" disabled="disabled" class="btn btn-large btn-primary">Envoyer</button>
+            </div>
+			<div id="statusMessage">
+                Réponse en cours d'écriture
             </div>
 		</div>
 	</div>
@@ -76,10 +77,10 @@
 	<div class="ui-layout-east">
         <h4>GeekRoulette est une réalisation de : </h4>
         <ul style="list-style-type: none; padding:0; margin:0;">
-            <li style="padding-bottom:5px;"><a href="#">Jean-François Gagné-Bérubé</a> (<a href="#">FailQC</a>)</li>
+            <li style="padding-bottom:5px;"><a href="http://failqc.com/" target="_blank">Jean-François Gagné Bérubé</a> (<a href="http://failqc.com/" target="_blank">FailQC</a>)</li>
             <li style="padding-bottom:5px;"><a href="http://code18.blogspot.ca/">Code18</a></li>
             <li style="padding-bottom:5px;"><a href="http://frenchcoding.com/about/">Pascal Paradis</a></li>
-            <li style="padding-bottom:5px;"><a href="#">Saymone P.</a></li>
+            <li style="padding-bottom:5px;"><a href="http://cartooniste.com/" target="_blank">Saymone P.</a></li>
         </ul>
     </div>
 	

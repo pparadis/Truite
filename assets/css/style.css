@@ -12,6 +12,14 @@
 	opacity:0.85;
 }
 
+.ui-layout-pane{
+	overflow:hidden !important;
+}
+
+#center{
+	overflow:auto !important;
+}
+
 #zone{
 	padding: 0px !important;
 	border: 0px !important;
@@ -102,8 +110,8 @@ p{
 }
 
 #statusMessage{
-    position: absolute; 
-    bottom: 0; 
+    position: absolute;
+	bottom:0px;
     background:#F0F0F0;
     width:500px;
     display:none;
