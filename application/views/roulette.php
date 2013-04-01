@@ -86,7 +86,7 @@
             <a class="addthis_counter addthis_bubble_style"></a>
             </div>
             <script type="text/javascript">var addthis_config = {"data_track_addressbar":true};</script>
-            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f85a0a945c65b0c"></script>
+            <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f85a0a945c65b0c#async=1"></script>
             <!-- AddThis Button END -->
         </div></p>
 		<h4 style="margin-top:20px">Tu veux réessayer?</h4>
