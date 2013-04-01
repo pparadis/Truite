@@ -306,7 +306,7 @@ $(document).ready(function () {
 		$("#stopBtn").trigger("click");
 		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
 		$('#center').scrollTop($('#frame_conversation').height());
-		statusBar.html("Vous avez été flushé.");
+		statusBar.html("Comme un poisson mort, vous avez été flushé.");
 		status = 0;
 		$("#statusMessage").hide();
 	}

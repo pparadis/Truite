@@ -20,13 +20,13 @@
 		<div id="center" style="position:relative;">
             <!--Fenêtre de discussion-->
             <div id="frame_conversation">
-                <p style="margin-bottom:10px;">Bienvenue sur <strong>GeekRoulette.ca</strong>, l'endroit par excellence pour vos blind-dates geeks et hétéros, comme quoi ça peut être facile pour un geek de se faire de nouveaux amis.</p><p style="font-weight: bold">À propos du service:</p>
+                <p style="margin-bottom:10px;">Bienvenue sur <strong>GeekRoulette.ca</strong>, version 0.9 <a href="http://fr.wikipedia.org/wiki/Betta" target="_blank">betta</a>, l'endroit par excellence pour vos blind-dates geeks et hétéros, comme quoi ça peut être facile pour un geek de se faire de nouveaux amis.</p><p style="font-weight: bold">À propos du service:</p>
                 <ul>
                     <li>Il est défendu de montrer sa bizoune (aussi grosse soit-elle).</li>
                     <li>Il n'est pas défendu d'être topless si vous êtes une femme âgée entre 20 à 25 ans.</li>
                     <li>Il n'est pas nécessaire d'avoir une bonne haleine pour chatter, mais nous vous conseillons fortement d'au moins mâcher une gomme à la menthe afin de ne pas brûler les pixels de votre écran.</li>
                     <li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
-					<li>L'équipe se réserve le droit de monitorer vos conversations, pour but d'analyse geek.</li>
+                    <li>L'équipe se réserve le droit de monitorer vos conversations, pour but d'analyse geek.</li>
                 </ul>
                 <p style="font-weight: bold">Comment faire la discussion à un geek:</p>
                 <ul>
