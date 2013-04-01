@@ -263,6 +263,7 @@ $(document).ready(function () {
 		$("#stopBtn").trigger("click");
 		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
 		statusBar.html("Vous avez été flushé.");
+		status = 0;
 	}
 });
 

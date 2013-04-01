@@ -28,6 +28,8 @@ var chatBot = (function ($, w, undefined) {
 
     var responseInProgress = false;
     function handleResponse() {
+        console.log(status);
+        if (status != 2) return;
         messageTable.push(chatMsg);
         //console.log("stack " + messageTable.length);
         if (messageTable.length >= 1) {
@@ -44,17 +46,21 @@ var chatBot = (function ($, w, undefined) {
                     responseInProgress = false;
 
                     $("#statusMessage").fadeOut();
-
-                    postFromAI(discussionTable[discussionIndex]);
-
-                    if (discussionIndex == discussionTable.length - 1) {
+                    if (status == 2)
+                    {
                         postFromAI(discussionTable[discussionIndex]);
 
-                        discussionIndex = 0;
+                        if (discussionIndex == discussionTable.length - 1) {
+                            postFromAI(discussionTable[discussionIndex]);
 
-                        byeTimer = setTimeout(function () {
-                            $("#nextBtn").click();
-                        }, getRandomInt(1000, 4000));
+                            discussionIndex = 0;
+
+                            byeTimer = setTimeout(function () {
+                                $("#nextBtn").click();
+                            }, getRandomInt(1000, 4000));
+                        }
+                    } else {
+                        $("#statusMessage").hide();
                     }
                 }, getRandomInt(1000, 4000));
             }, getRandomInt(1000, 1250));
