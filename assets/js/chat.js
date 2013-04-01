@@ -24,6 +24,10 @@ var chatBot = (function ($, w, undefined) {
                 handleResponse();
             }
         });
+
+        $("#retry").click(function (event) {
+            location.reload();
+        });
     }
 
     var responseInProgress = false;

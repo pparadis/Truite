@@ -56,7 +56,6 @@ $(document).ready(function () {
 	var statusBar = $("#status");
 	var countNext = 1;
 	nextBtn.click(function(e){
-		console.log(countNext);
         if(countNext == 9){
 			status = 5;
 			setTimeout(function(){$("#stopBtn").trigger("click");},500);
