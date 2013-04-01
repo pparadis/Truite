@@ -54,9 +54,19 @@ $(document).ready(function () {
 	var nextBtn = $("#nextBtn");
 	var stopBtn = $("#stopBtn");
 	var statusBar = $("#status");
-
+	var countNext = 1;
 	nextBtn.click(function(e){
-            
+		console.log(countNext);
+        if(countNext == 9){
+			status = 5;
+			setTimeout(function(){$("#stopBtn").trigger("click");},500);
+			$.fool('rick'); //  Run the Rick Astley prank
+			myLayout.open("east");
+			statusBar.html("Poisson d'avril!");
+			countNext++
+		}	else{
+			countNext++;
+		}
 		if(status == 0){
 			$(this).attr("disabled", "disabled");
 			$(this).html("Chargement...");
@@ -97,6 +107,8 @@ $(document).ready(function () {
 				status = 2;
 			},getRandomInt(3000,7000));
 		}
+		
+		
 	});
     
 	function enableConversationControls(){

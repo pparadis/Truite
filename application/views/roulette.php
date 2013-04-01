@@ -89,14 +89,18 @@
             <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-4f85a0a945c65b0c"></script>
             <!-- AddThis Button END -->
         </div></p>
-		<h4>Tu veux réessayer?</h4>
+		<h4 style="margin-top:20px">Tu veux réessayer?</h4>
 		<p><button id="retry">Recharger la page</button></p>
-        <h4>GeekRoulette est une réalisation de : </h4>
+        <h4 style="margin-top:20px">GeekRoulette est une réalisation de : </h4>
         <ul style="list-style-type: none; padding:0; margin:0;">
-            <li style="padding-bottom:5px;"><a href="http://twitter.com/jeanfrancoisgb" target="_blank">Jean-François Gagné Bérubé</a> (<a href="http://failqc.com/" target="_blank">FailQC</a>)</li>
-            <li style="padding-bottom:5px;"><a href="http://code18.blogspot.ca/">Code18</a></li>
-            <li style="padding-bottom:5px;"><a href="http://frenchcoding.com/about/">Pascal Paradis</a></li>
-            <li style="padding-bottom:5px;"><a href="http://cartooniste.com/" target="_blank">Saymone P.</a></li>
+            <li style="padding-bottom:5px;"><a href="http://twitter.com/jeanfrancoisgb" target="_blank">Jean-François Gagné Bérubé</a> (<a href="http://failqc.com/" target="_blank">FailQC</a>) <br><a href="https://twitter.com/jeanfrancoisgb" class="twitter-follow-button" data-show-count="true" data-lang="fr">Follow @twitterapi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+            <li style="padding-bottom:5px;"><a href="http://code18.blogspot.ca/">Code18</a> <br><a href="https://twitter.com/code18" class="twitter-follow-button" data-show-count="true" data-lang="fr">Follow @twitterapi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+            <li style="padding-bottom:5px;"><a href="http://frenchcoding.com/about/">Pascal Paradis</a> <br><a href="https://twitter.com/pparadis" class="twitter-follow-button" data-show-count="true" data-lang="fr">Follow @twitterapi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
+            <li style="padding-bottom:5px;"><a href="http://cartooniste.com/" target="_blank">Saymone P.</a> <br><a href="https://twitter.com/saymonephan" class="twitter-follow-button" data-show-count="true" data-lang="fr">Follow @twitterapi</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src="http://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></li>
         </ul>
     </div>
 	
