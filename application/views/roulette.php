@@ -18,6 +18,12 @@
 <body>
 	<div id="zone" class="ui-layout-center">
 		<div id="center" style="position:relative;">
+        <div id="BoxErreur" style="display:none;background:#fffed7;padding: 15px 15px 10px 10px; margin-bottom:10px;">
+                <h5>Votre navigateur n'est pas supporté!</h5>
+                <p>
+                    Il semble que vous utilisez Internet Explorer. Les vrais geeks n'utilisent pas ce navigateur pourtant? Utilisez Chrome ou Firefox pour une expérience optimale.
+                </p>
+            </div>
             <!--Fenêtre de discussion-->
             <div id="frame_conversation">
                 <p style="margin-bottom:10px;">Bienvenue sur <strong>GeekRoulette.ca</strong>, version 0.9 <a href="http://fr.wikipedia.org/wiki/Betta" target="_blank">betta</a>, l'endroit par excellence pour vos blind-dates geeks et hétéros, comme quoi ça peut être facile pour un geek de se faire de nouveaux amis.</p><p style="font-weight: bold">À propos du service:</p>
