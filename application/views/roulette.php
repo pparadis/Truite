@@ -19,19 +19,21 @@
 		<div id="center" style="position:relative;">
             <!--Fenêtre de discussion-->
             <div id="frame_conversation">
-                <p style="margin-bottom:10px;">Bienvenue sur GeekRoulette.ca, l'endroit par excellence pour vos blind-dates geeks et hétéros, comme quoi ça peut être facile pour un geek de se faire de nouveaux amis.</p><p>À propos du service:</p>
+                <p style="margin-bottom:10px;">Bienvenue sur <strong>GeekRoulette.ca</strong>, l'endroit par excellence pour vos blind-dates geeks et hétéros, comme quoi ça peut être facile pour un geek de se faire de nouveaux amis.</p><p style="font-weight: bold">À propos du service:</p>
                 <ul>
-                    <li>Il est défendu de montrer sa bizoune.</li>
+                    <li>Il est défendu de montrer sa bizoune (aussi grosse soit-elle).</li>
+                    <li>Il n'est pas défendu d'être topless si vous êtes une femme âgée entre 20 à 25 ans.</li>
+                    <li>Il n'est pas nécessaire d'avoir une bonne haleine pour chatter, mais nous vous conseillons fortement d'au moins mâcher une gomme à la menthe afin de ne pas brûler les pixels de votre écran.</li>
                     <li>Les invocations sataniques sont interdites les lundis et jeudis.</li>
 					<li>L'équipe se réserve le droit de monitorer vos conversations, pour but d'analyse geek.</li>
                 </ul>
-                <p>Comment faire la discussion à un geek:</p>
+                <p style="font-weight: bold">Comment faire la discussion à un geek:</p>
                 <ul>
                     <li>Jasez de votre sorte de chips préférée.</li>
                     <li>Demandez à votre geek de convertir un nombre en binaire.</li>
-                    <li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Chrome ou IE? (lol)</li>
+                    <li>Lancez un débat; Sega ou Nintendo? Pirate ou ninja? Star Wars ou Star Trek? Crémeuse ou traditionnelle? Le sens du rouleau de papier de toilette : extérieur ou intérieur? Chrome ou IE? (lol)</li>
                 </ul>			
-                <p>Appuyez sur <b>Démarrer</b> pour commencer.</p>
+                <p style="font-size: 16px; margin: 20px 0">Appuyez sur <b style="color: #0f7b0d">Démarrer</b> pour commencer.</p>
             </div>
             <div id="statusMessage">
                 Réponse en cours d'écriture

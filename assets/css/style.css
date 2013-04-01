@@ -124,3 +124,109 @@ p{
 textarea:focus, input:focus{
     outline: none;
 }
+
+
+/* Modifications par Saymone */
+
+
+html body.ui-layout-container div.ui-layout-north div#buttons button#nextBtn,
+html body.ui-layout-container div.ui-layout-north div#buttons button#stopBtn
+
+{
+    background-repeat: repeat-x;
+    border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
+    color: #FFFFFF;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    border-radius: 6px;
+}
+
+html body.ui-layout-container div.ui-layout-north div#buttons button#nextBtn
+{
+	background-color: #1ad317;
+	background-image: linear-gradient(to bottom, #1ad317, #0f7b0d);
+}
+
+html body.ui-layout-container div.ui-layout-north div#buttons button#stopBtn
+{
+	background-color: #f22525;
+	background-image: linear-gradient(to bottom, #f22525, #c51515);	
+}
+
+html body.ui-layout-container div.ui-layout-north div#buttons button#nextBtn:hover
+{
+	background-color: #025b00;
+	background-image: linear-gradient(to bottom, #0f7b0d, #025b00);
+}
+
+html body.ui-layout-container div.ui-layout-north div#buttons button#stopBtn:hover
+{
+	background-color: #6e0606;
+	background-image: linear-gradient(to bottom, #c51515, #6e0606);
+}
+
+html body.ui-layout-container div.ui-layout-north div#buttons button
+{
+	display: inline-block;
+}
+
+#status_zone
+{
+	display: inline-block;
+	font-size: 12px;
+	background-color: #eee;
+	padding: 5px;
+	border-radius: 5px;
+	width: 200px;
+	color: #676767;
+	margin-top: 3px;
+}
+
+#status_zone #status
+{
+	color: #333;
+}
+
+#buttons
+{
+	width: auto;
+	background: none;
+	padding: 10px 0 0 0;
+}
+
+.user_name
+{
+	text-align: center;
+	background-color: #ededed;
+	border: #999;
+	text-transform: uppercase;
+	font-size: 11px;
+	font-weight: bold;
+	color: #464646;
+}
+
+.video_zone
+{
+	background-color: #ededed;
+	border-radius: 6px;
+	border: 1px solid #ddd;
+		
+}
+
+#logo
+{
+	text-indent: -30000px;
+	background-image: url(../img/logo_geekroulette.png);
+	background-color: #fff;	
+}
+
+#sendBtn
+{
+	margin-top: -14px;
+	margin-left: 10px;
+}
+
+#frame_conversation
+{
+	font-size: 13px;
+}
+
