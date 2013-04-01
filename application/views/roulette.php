@@ -61,16 +61,13 @@
 	</div>
 	
 	<div class="ui-layout-east">
-        <h3>GeekRoulette est une réalisation de : </h2>
-        <p>
-            <a href="#">Jean-François Gagné-Bérubé</a> (<a href="#">FailQC</a>)
-        </p>
-        <p>
-            <a href="http://code18.blogspot.ca/">Code18</a>
-        </p>
-        <p>
-            <a href="http://frenchcoding.com/about/">Pascal Paradis</a>
-        </p>
+        <h4>GeekRoulette est une réalisation de : </h4>
+        <ul style="list-style-type: none; padding:0; margin:0;">
+            <li style="padding-bottom:5px;"><a href="#">Jean-François Gagné-Bérubé</a> (<a href="#">FailQC</a>)</li>
+            <li style="padding-bottom:5px;"><a href="http://code18.blogspot.ca/">Code18</a></li>
+            <li style="padding-bottom:5px;"><a href="http://frenchcoding.com/about/">Pascal Paradis</a></li>
+            <li style="padding-bottom:5px;"><a href="#">Saymone P.</a></li>
+        </ul>
     </div>
 	
 	<div class="ui-layout-west">
