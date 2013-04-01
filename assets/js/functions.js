@@ -311,9 +311,9 @@ $(document).ready(function () {
 	
 	function nexted(){
 		$("#stopBtn").trigger("click");
-		$('<p><b>Votre geek vous a flushé. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
+		$('<p><b>Votre geek vous a flushé comme un poisson mort. Meilleure chance la prochaine fois.</b></p>').appendTo('#frame_conversation');
 		$('#center').scrollTop($('#frame_conversation').height());
-		statusBar.html("Comme un poisson mort, vous avez été flushé.");
+		statusBar.html("Vous avez été flushé.");
 		status = 0;
 		$("#statusMessage").hide();
 	}
