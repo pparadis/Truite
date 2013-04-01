@@ -1,4 +1,4 @@
-﻿![GeekRoulette](http://geekroulette.ca/)
+﻿![GeekRoulette](http://geekroulette.ca/assets/img/logo_geekroulette.png)
 ====
 
 Truite est le nom de code que nous avons donné à l'engin derrière http://geekroulette.ca/. Avec ce site, vous pouvez socialiser et interragir avec des geeks près de vous.
