@@ -15,6 +15,7 @@ var chatBot = (function ($, w, undefined) {
                 }
             }
         });
+        
         $("#sendBtn").click(function (event) {
             //if (status != 1) return;
             chatMsg = $("#frame_input").val().trim();
