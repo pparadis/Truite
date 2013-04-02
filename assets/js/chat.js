@@ -2,6 +2,7 @@ var chatBot = (function ($, w, undefined) {
     initControls();
 
     var messageTable = new Array();
+
     function initControls() {
         $("#frame_input").keyup(function (event) {
             //if (status != 1) return;
