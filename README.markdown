@@ -18,6 +18,7 @@ Truite a été conçu pour imiter la fonctionnalité de rencontre virtuelle de C
 ## Auteurs
 
 Truite est une réalisation de : 
+
 * [Jean-François Gagné Bérubé](http://twitter.com/jeanfrancoisgb)
 * [Code18](http://code18.blogspot.ca/)
 * [Pascal Paradis](http://frenchcoding.com/about/)
